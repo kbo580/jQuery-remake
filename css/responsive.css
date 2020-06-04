@@ -1,0 +1,43 @@
+@media(max-width: 375px){
+  header{
+    width: 100%;
+  }
+
+  header h1{
+    font-size: 4rem;
+  }
+  main h2{
+    width: 100%;
+  }
+
+  .example{
+    margin: 10px auto;
+    width: 90%;
+  }
+  .example li{
+    font-size: 1.2rem;
+  }
+  .attention{
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .attention li{
+    font-size: 1.2rem;
+  }
+
+  #uniqSelector dl>dt:first-child{
+    font-size: 1.6rem;
+  }
+  .attr-result{
+   width: 80%;
+   margin: 0 auto;
+   font-size: 1.4rem;
+  }
+
+  .kihon{
+    width: 90%;
+    margin: 0 auto;
+    font-size: 1rerem;
+  }
+}
