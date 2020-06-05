@@ -1,13 +1,6 @@
 @media(max-width: 480px){
-  header{
-    width: 100%;
-  }
-
   header h1{
     font-size: 4rem;
-  }
-  main h2{
-    /* width: 100%; */
   }
 
   .column{
