@@ -7,37 +7,58 @@
     font-size: 4rem;
   }
   main h2{
-    width: 100%;
+    /* width: 100%; */
+  }
+
+  .column{
+    margin-left: -40px;
+  }
+
+  .explain{
+    font-size: 1.4rem;
   }
 
   .example{
-    margin: 10px auto;
-    width: 90%;
+    /* margin: 10px auto; */
+    width: 80%;
+    white-space:nowrap;
+   overflow: scroll;
   }
   .example li{
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+  }
+  
+  #uniqSelector dl>dt:first-child{
+    font-size: 1.6rem;
+  }
+  .attr-result{
+    width: 80%;
+    margin: 0 auto 20px;
+  }
+  
+  .attr-result li{
+    font-size: 1.5rem;
+  }
+  
+  .kihon{
+    width: 90%;
+    margin: 0 auto;
+    font-size: 1.4rem;
+  }
+  .kihon li{
+    font-size: 1.4rem;
   }
   .attention{
     width: 90%;
     margin: 0 auto;
+    white-space:nowrap;
+   overflow: scroll;
   }
 
   .attention li{
     font-size: 1.2rem;
   }
-
-  #uniqSelector dl>dt:first-child{
-    font-size: 1.6rem;
-  }
-  .attr-result{
-   width: 80%;
-   margin: 0 auto;
-   font-size: 1.4rem;
-  }
-
-  .kihon{
-    width: 90%;
-    margin: 0 auto;
-    font-size: 1rerem;
+  .attention p{
+    font-size: 1.2rem;
   }
 }
