@@ -674,3 +674,16 @@ bottom:-16px
   top:-40px;
   left:5px;
 }
+
+#fox{
+border: 1px solid;
+cursor: pointer;
+color: #ddd;
+background-color: brown;
+display: inline-block;
+border-radius: 50%;
+width: 100px;
+height: 100px;
+line-height: 100px;
+font-size: 1.6rem;
+}
