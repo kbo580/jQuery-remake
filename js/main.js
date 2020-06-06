@@ -703,6 +703,10 @@ $(function(){
   $('#close').click(function(){
     $('#nav-content').css('transform','translateX(-150%)');
   });
+  
+  $('#fox').click(function(){
+    $('#sound').get(0).play();
+    });
 
 
 
