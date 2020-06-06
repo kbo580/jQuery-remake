@@ -12,8 +12,26 @@
 </head>
 <body>
   <header>
+    
     <h1>jQuery備忘録</h1>
     <p>自分用の備忘録とまとめ</p>
+    <!-- <a href="mordal.html">tt</a> -->
+    <div id="nav-drawer">
+      <div id="open">メニュー</div>
+      <input type="checkbox" id="nav-input" class="nav-unshown">
+      <label for="nav-input" id="nav-open"><span></span></label>
+      <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+      <div id="nav-content">
+        <ul class="sp-nav">
+          <span id="close">×</span>
+          <li><a href="index.html">セレクター編</a></li>
+          <li><a href="event.html">イベント編</a></li>
+          <li><a href="order.html">メソッド編</a></li>
+          <li><a href="animation.html">アニメーション編</a></li>
+          <li><a href="form.html">フォーム編</a></li>
+        </ul>
+      </div>
+    </div>
       <ul class="header-nav">
         <li><a href="index.html"><i class="fas fa-sort-down"></i>セレクター</a>
           <ul id="serectorIndex" class="indexSub">
@@ -66,7 +84,7 @@
       </ul>
   </header>
 
-  <main>
+  <main class="selectorWrapper">
     <div class="inner">
       <h1>セレクター編</h1> 
       <section class="selectorIntro">
@@ -273,8 +291,8 @@
               <button id="hiteiSecondBtn">変更</button>
             </div> 
             <dd class="figure">$('li:not(#third,#fourth)');<br><span class="explain">li要素のid=third,fourth以外の要素を取得する</span></dd>
+            <dd>２つ目の例だと#third,#fourth以外の要素を選択する。</dd>
           </div>
-          <dd>２つ目の例だと#third,#fourth以外の要素を選択する。</dd>
         </dl>
 
         <dl>
@@ -292,8 +310,8 @@
               <button id="emptyBtn">変更</button>
             </div> 
             <dd class="figure">$('li:empty');<br><span class="explain">li要素の空欄の要素を取得する</span></dd>
+            <dd>２番目のli要素が空なのでそこが選択される。</dd>
           </div>
-          <dd>２番目のli要素が空なのでそこが選択される。</dd>
         </dl>
 
         <dl>
@@ -394,8 +412,8 @@
                 <button id="attrBtn">変更</button>
               </div> 
               <dd class="figure">$('[id]').css('color','red');<br><span class="explain">id属性を持つ要素を赤色にする</span></dd>
+              <dd>この場合だとid属性を持つものを取得する。</dd>
             </div>
-            <dd>この場合だとid属性を持つものを取得する。</dd>
           </dl>
 
           <dl>
@@ -413,14 +431,14 @@
                 <button id="sameBtn">変更</button>
               </div> 
               <dd class="figure">$('[id="second"]').css('color','red');<br><span class="explain">id属性がsecondの要素を赤色にする</span></dd>
+              <dd>idがsecondの要素を取得する。</dd>
             </div>
-            <dd>idがsecondの要素を取得する。</dd>
           </dl>
 
           <dl>
             <dt class="heading">[属性値!=" "]</dt>
-            <div class="column">
-              <dd>特定の属性と特定の値が異なるもの。</dd>
+            <dd>特定の属性と特定の値が異なるもの。</dd>
+              <div class="column">
               <dd class="figure">$('[id!="second"]')</dd>
               <div class="example">
                 <ul class="difer">
@@ -432,8 +450,8 @@
                 <button id="diferBtn">変更</button>
               </div> 
               <dd class="figure">$('[id!="second"]').css('color','red');<br><span class="explain">id属性がsecond以外要素を赤色にする</span></dd>
+              <dd>idがsecond以外の要素を取得する。</dd>
             </div>
-            <dd>idがsecond以外の要素を取得する。</dd>
           </dl>
 
           <dl>
@@ -452,8 +470,8 @@
                 <button id="startBtn">変更</button>
               </div> 
               <dd class="figure">$('[id^="f"]').css('color','red');<br><span class="explain">id属性が「f」から始まる要素を赤色にする</span></dd>
+              <dd>この例だとidが「f」から始まる「first」と「fourth」の要素が取得される。</dd>
             </div>
-            <dd>この例だとidが「f」から始まる「first」と「fourth」の要素が取得される。</dd>
           </dl>
 
           <dl>
@@ -472,8 +490,8 @@
                 <button id="endBtn">変更</button>
               </div> 
               <dd class="figure">$('[id$="d"]').css('color','red');<br><span class="explain">id属性が「d」で終わる要素を赤色にする</span></dd>
+              <dd>この例だとidが「d」で終わる「second」と「third」の要素が取得される。</dd>
             </div>
-            <dd>この例だとidが「d」で終わる「second」と「third」の要素が取得される。</dd>
           </dl>
 
           <dl>
@@ -491,8 +509,8 @@
                 <button id="contBtn">変更</button>
               </div> 
               <dd class="figure">$('[id*="ir"]').css('color','red');<br><span class="explain">id属性が「ir」を含む要素を赤色にする</span></dd>
+              <dd>この例だとidに「ir」の文字列が含まれている「first」と「third」の要素が取得される。</dd>
             </div>
-            <dd>この例だとidに「ir」の文字列が含まれている「first」と「third」の要素が取得される。</dd>
           </dl>
 
           <dl>
@@ -650,8 +668,6 @@
         <a href=""><i class="fab fa-line footer-icon"></i></a>
         <p>&copy kbo 2020</p>
       </div>
-
-     
     </footer>
   </div>
     <script src="js/main.js"></script>
