@@ -1,10 +1,26 @@
 @media(max-width: 480px){
-  header h1{
-    font-size: 4rem;
+  dd{
+    margin-left: 20px;
   }
+  
+header{
+  height: 220px;
+}
+
+  header h1{
+    font-size: 3.6rem;
+  }
+
+  main h2{
+    font-size: 2.6rem;
+  } 
 
   .column{
     margin-left: -40px;
+  }
+
+  #oredr-wrapper .figure{
+    font-size: 1.4rem;
   }
 
   .explain{
@@ -12,7 +28,6 @@
   }
 
   .example{
-    /* margin: 10px auto; */
     width: 80%;
     white-space:nowrap;
    overflow: scroll;
@@ -20,8 +35,14 @@
   .example li{
     font-size: 1.4rem;
   }
+
+  .column dd{
+    margin-left: 40px;
+  }
+
+ 
   
-  #uniqSelector dl>dt:first-child{
+  #uniqSelector dl:nth-of-type(1)>dt:nth-of-type(1){
     font-size: 1.6rem;
   }
   .attr-result{
@@ -54,4 +75,52 @@
   .attention p{
     font-size: 1.2rem;
   }
+  /* メソッド */
+  #oredr-wrapper .example{
+    width: 80%;
+    }
+  
+  
+  .event-wrapper .example{
+    width: 80%;
+  }
+  
+  .event-wrapper img{
+    width: 100%;
+  }
+
+  .formWrapper .example{
+    width: 80%;
+    background-color: red;
+    font-size: 1.4rem;
+  }
+
+
+  .header-nav{
+    display: none;
+ }
+
+ #open{
+   display: inline-block;
+   border:1px solid #ddd;
+   color: #ddd;
+   padding: 12px;
+   width: 150px;
+   margin: 0 auto;
+
+   
+ }
+
+
+
+
+
+
+
+
+
+
+
+
 }
+
