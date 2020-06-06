@@ -534,25 +534,25 @@ $(function(){
   
   $('#animation-btn').click(function(){
     $("#anim").animate({
-      "margin-left": "500px"
+      "margin-left": "45vw"
     })
   });
   
   $('#animation-btn2').click(function(){
     $("#anim2").animate({
-      "margin-left": "500px"
+      "margin-left": "45vw"
       },1000)
     });
   
   $('#animation-btn3').click(function(){
     $("#anim3").animate({
-      "margin-left": "500px"
+      "margin-left": "45vw"
       },1000,'swing')
     });
   
   $('#animation-btn4').click(function(){
     $("#anim4").animate({
-      "margin-left": "500px",
+      "margin-left": "45vw",
       "width": "50px",
       "height": "50px"
       },1000,'swing',function(){
@@ -694,7 +694,21 @@ $(function(){
        $('.error-message2').text('チェックしてください').css('color','red');
       }
   });
-  
+
+  /////////////////////////////////////モーダル////////////////////
+  $('#open').click(function(){
+   //$('#nav-content').css('transform','translateX(0%)');
+   $('#nav-content').css({'transform':'translateX(0%)'});
+  });
+  $('#close').click(function(){
+    $('#nav-content').css('transform','translateX(-150%)');
+  });
+
+
+
+
+
+
   });
   
   
