@@ -124,6 +124,7 @@ header{
   text-align: center;
   height: 300px;
   /* display: none; */
+  position: relative;
 }
 
 header h1{
@@ -141,14 +142,14 @@ header p{
   color: #fff;
 }
 
-.header-nav{
+.header-nav,#scrollNav{
   display: flex;
   width: 80%;
   margin: 0 auto;
 }
 
 
-.header-nav > li{
+.header-nav > li,#scrollNav >li{
   width: 100%;
   display: block;
    position: relative;
@@ -165,9 +166,10 @@ header a{
  color: #fff;
 }
 
-.header-nav > li a:hover{
+.header-nav > li a:hover, #scrollNav > li a:hover{
   background-color:#fff ;
   color:#305089;
+  transition: 0.4s;
 }
 
 .indexSub > li a{
@@ -191,6 +193,15 @@ position:absolute;
 header .fas{
   font-size: 1.6rem;
   margin-right: 6px;
+}
+
+#scrollNav-wrapper{
+position: fixed;
+top:0px;
+right: 0;
+left:0;
+margin: 0 auto;
+z-index: 88;
 }
 
 
@@ -224,9 +235,9 @@ footer{
   height: 200px;
 }
 
-footer #top{
+footer .top{
   bottom:0px;
-  /* right:1px; */
+  right:0px;
   background-color:navy;
   display: inline-block;
   padding: 20px;
@@ -547,6 +558,13 @@ textarea{
   width: 200px;
 }
 
+.checkboxClass.example{
+  height: 80px;
+}
+.favoritnoodle{
+  margin: 5px 0 0;
+}
+
 
 .doc-wrapper{
   height: 50px;
@@ -578,6 +596,7 @@ textarea{
 
 #nav-drawer{
   position: relative;
+  display: none;
 }
 
 .nav-unshown{
@@ -591,6 +610,9 @@ height: 22px;
 display: inline-block;
 vertical-align: middle;
 display: none;
+position: fixed;
+top:10px;
+right: 30px;
 }
 
 #nav-open span,#nav-open span:before, #nav-open span:after{
@@ -611,46 +633,23 @@ bottom: -8px
 bottom:-16px
 }
 
-#nav-close{
-  display:none;
-  position: fixed;
-  z-index: 1;
-  width:100%;
-  height: 100%;
-  top:0;
-  left:0;
-  background-color: #000;
-  opacity: 0;
-  transition: .3s ease-in-out;
-
-}
 
 #nav-content{
   overflow: auto;
   position:fixed;
   top:0;
-  left:0;
+  right:0;
   height: 100%;
   width: 50%;
   z-index: 2;
   max-width: 330px;
   background-color: rgba(0,0,0,0.8);
   transition: .6s ease-in-out;
-  transform: translateX(-105%)
+  transform: translateX(200%)
 
   
 }
 
-#nav-input:checked ~ #nav-close {
-  display: block;
-  opacity: .5;
-}
-
-#nav-input:checked ~ #nav-content {
-  -webkit-transform: translateX(0%);
-  transform: translateX(0%);
-  box-shadow: 6px 0 25px rgba(0,0,0,.15);
-}
 
 
 .sp-nav{
