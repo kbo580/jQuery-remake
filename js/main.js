@@ -7,6 +7,16 @@ $(function(){
     $('.indexSub',this).slideUp();
   }
   );
+
+  $('#top').hide();
+  $(window).scroll(function(){
+if($(this).scrollTop()>1500){
+  $('#top').fadeIn();
+}
+else{
+  $('#top').fadeOut();
+}
+  });
   
   $('#top').click(function(){
     $('html,body').animate({'scrollTop':0},300)
@@ -17,6 +27,18 @@ $(function(){
   },function(){
     $(this).animate({'font-size':'50px'},300)
   });
+
+  $('#scrollNav-wrapper').hide();
+  $(window).scroll(function(){
+    if($(this).scrollTop()>300){
+      $('#scrollNav-wrapper:not(animated)').fadeIn(300);
+    }else{
+      $('#scrollNav-wrapper:not(animated)').fadeOut('fast');
+    }
+    });
+
+
+  
   
   /////////////////////////////////////////セレクター//////////////////////////////////////
   $('#cssBtn').click(function(){
@@ -701,13 +723,36 @@ $(function(){
    $('#nav-content').css({'transform':'translateX(0%)'});
   });
   $('#close').click(function(){
-    $('#nav-content').css('transform','translateX(-150%)');
+    $('#nav-content').css('transform','translateX(200%)');
   });
-  
+
   $('#fox').click(function(){
     $('#sound').get(0).play();
     });
+  $('#nav-open').click(function(){
+   //$('#nav-content').css('transform','translateX(0%)');
+   $('#nav-content').css({'transform':'translateX(0%)'});
+  });
+  $('#close').click(function(){
+    $('#nav-content').css('transform','translateX(200%)');
+  });
 
+  $('#fox').click(function(){
+    $('#sound').get(0).play();
+    });
+     
+$('#nav-open').hide();
+$(window).scroll(function(){
+if($(this).scrollTop()>180){
+  $('#nav-open').show('fast');
+}else{
+  $('#nav-open').hide('fast');
+}
+});
+
+
+
+    
 
 
 
